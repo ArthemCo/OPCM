@@ -1,28 +1,18 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package OPCM
- */
-
-?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'opcm' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'opcm' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'opcm' ), 'opcm', '<a href="https://arthem.co" rel="designer">Arthem Co.</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
-
-</body>
-</html>
+					<footer class="footer" role="contentinfo">
+						<div id="inner-footer" class="row">
+							<div class="large-12 medium-12 columns">
+								<nav role="navigation">
+		    						<?php joints_footer_links(); ?>
+		    					</nav>
+		    				</div>
+							<div class="large-12 medium-12 columns">
+								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+							</div>
+						</div> <!-- end #inner-footer -->
+					</footer> <!-- end .footer -->
+				</div>  <!-- end .main-content -->
+			</div> <!-- end .off-canvas-wrapper-inner -->
+		</div> <!-- end .off-canvas-wrapper -->
+		<?php wp_footer(); ?>
+	</body>
+</html> <!-- end page -->

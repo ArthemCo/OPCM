@@ -1,140 +1,42 @@
 <?php
-/**
- * OPCM functions and definitions.
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package OPCM
- */
+// Theme support options
+require_once(get_template_directory().'/assets/functions/theme-support.php');
 
-if ( ! function_exists( 'opcm_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function opcm_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on OPCM, use a find and replace
-	 * to change 'opcm' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( 'opcm', get_template_directory() . '/languages' );
+// WP Head and other cleanup functions
+require_once(get_template_directory().'/assets/functions/cleanup.php');
 
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+// Register scripts and stylesheets
+require_once(get_template_directory().'/assets/functions/enqueue-scripts.php');
 
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
+// Register custom menus and menu walkers
+require_once(get_template_directory().'/assets/functions/menu.php');
 
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-	 */
-	add_theme_support( 'post-thumbnails' );
+// Register sidebars/widget areas
+require_once(get_template_directory().'/assets/functions/sidebar.php');
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'opcm' ),
-	) );
+// Makes WordPress comments suck less
+require_once(get_template_directory().'/assets/functions/comments.php');
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+// Replace 'older/newer' post links with numbered navigation
+require_once(get_template_directory().'/assets/functions/page-navi.php');
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'opcm_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-}
-endif;
-add_action( 'after_setup_theme', 'opcm_setup' );
+// Adds support for multiple languages
+require_once(get_template_directory().'/assets/translation/translation.php');
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function opcm_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'opcm_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'opcm_content_width', 0 );
+// Remove 4.2 Emoji Support
+require_once(get_template_directory().'/assets/functions/disable-emoji.php');
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function opcm_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'opcm' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'opcm' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'opcm_widgets_init' );
+// Adds site styles to the WordPress editor
+//require_once(get_template_directory().'/assets/functions/editor-styles.php');
 
-/**
- * Enqueue scripts and styles.
- */
-function opcm_scripts() {
-	wp_enqueue_style( 'opcm-style', get_stylesheet_uri() );
+// Related post function - no need to rely on plugins
+// require_once(get_template_directory().'/assets/functions/related-posts.php');
 
-	wp_enqueue_script( 'opcm-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+// Use this as a template for custom post types
+// require_once(get_template_directory().'/assets/functions/custom-post-type.php');
 
-	wp_enqueue_script( 'opcm-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+// Customize the WordPress login menu
+require_once(get_template_directory().'/assets/functions/login.php');
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'opcm_scripts' );
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
+// Customize the WordPress admin
+require_once(get_template_directory().'/assets/functions/admin.php'); 

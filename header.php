@@ -1,49 +1,55 @@
-<?php
-/**
- * The header for our theme.
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package OPCM
- */
+<!doctype html>
 
-?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+  <html class="no-js"  <?php language_attributes(); ?>>
 
-<?php wp_head(); ?>
-</head>
+	<head>
+		<meta charset="utf-8">
+		
+		<!-- Force IE to use the latest rendering engine available -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'opcm' ); ?></a>
+		<!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta class="foundation-mq">
+		
+		<!-- If Site Icon isn't set in customizer -->
+		<?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
+			<!-- Icons & Favicons -->
+			<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+			<link href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-icon-touch.png" rel="apple-touch-icon" />
+			<!--[if IE]>
+				<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+			<![endif]-->
+			<meta name="msapplication-TileColor" content="#f01d4f">
+			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/images/win8-tile-icon.png">
+	    	<meta name="theme-color" content="#121212">
+	    <?php } ?>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+		<?php wp_head(); ?>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'opcm' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		<!-- Drop Google Analytics here -->
+		<!-- end analytics -->
 
-	<div id="content" class="site-content">
+	</head>
+	
+	<!-- Uncomment this line if using the Off-Canvas Menu --> 
+		
+	<body <?php body_class(); ?>>
+
+		<div class="off-canvas-wrapper">
+			
+			<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+				
+				<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
+				
+				<div class="off-canvas-content" data-off-canvas-content>
+					
+					<header class="header" role="banner">
+							
+						 <!-- This navs will be applied to the topbar, above all content 
+							  To see additional nav styles, visit the /parts directory -->
+						 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+		 	
+					</header> <!-- end .header -->

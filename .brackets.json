@@ -1,0 +1,15 @@
+{
+    "sass.enabled": false,
+    "path": {
+        "scss/main.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../assets/css/",
+                "includePaths": [],
+                "sourceComments": false,
+                "outputStyle": "compressed"
+            },
+            "linting.collapsed": false
+        }
+    }
+}
