@@ -22,6 +22,9 @@
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oranienbaum|PT+Sans" rel="stylesheet">
+
 		<?php wp_head(); ?>
 
 		<!-- Drop Google Analytics here -->
@@ -29,6 +32,6 @@
 
 	</head>
 	<body <?php body_class(); ?>>
-		<nav class="header" role="banner">
+		<nav role="navigation" id="nav-global">
 			 <?php get_template_part( 'parts/nav' ); ?>
-		</nav> <!-- end .header -->
+		</nav>

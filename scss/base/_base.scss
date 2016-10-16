@@ -31,11 +31,11 @@ body {
 }
 
 ::-moz-selection {
-    background: $brand;
-    color: $white;
+    background: $brand-light;
+    color: $black;
 }
 
 ::selection {
-    background: $brand;
-    color: $white;
+    background: $brand-light;
+    color: $black;
 }

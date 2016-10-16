@@ -32,5 +32,5 @@ OPCM includes support for Infinite Scroll in Jetpack.
 
 == Credits ==
 
-
+* tympanus.net http://tympanus.net/Development/LineMenuStyles/#Adrian
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
