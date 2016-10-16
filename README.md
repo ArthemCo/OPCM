@@ -5,7 +5,7 @@ OPCM
 
 Founded in 2014 with the purpose of creating a distinct community of talented young musicians, the Orchestre Philharmonique et Choeur des Mélomanes (OPCM) is an organization that strives to share the grandour of live classical music.
 
-[![Screenshot](http://live.arthem.co/OPCM-readme.jpg)]
+![Screenshot](http://live.arthem.co/OPCM-readme.jpg)
 
 ## Credits
 * Scrollreveal
