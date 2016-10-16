@@ -1,0 +1,32 @@
+#content {
+	margin-top: $nav-height-mobile;
+}
+
+@include media('>=desktop') {
+	#content {
+		margin-top: $nav-height-desktop;
+	}
+}
+
+.alignleft, .alignright {
+	width: 50%;
+	display: inline-block;
+	margin-bottom: 1em;
+	
+}
+.alignleft {
+	float: left;
+	margin-right: 1em;
+}
+.alignright {
+	float: right;
+	margin-left: 1em;
+}
+
+article.page {
+	margin-top: 2rem;
+}
+
+footer {
+	text-align: center;
+}

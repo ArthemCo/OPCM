@@ -35,6 +35,9 @@ require_once(get_template_directory().'/assets/functions/disable-emoji.php');
 // Use this as a template for custom post types
 // require_once(get_template_directory().'/assets/functions/custom-post-type.php');
 
+// Add options page to hold semi-permanent values
+require_once(get_template_directory().'/assets/functions/customizer.php'); 
+
 // Customize the WordPress login menu
 require_once(get_template_directory().'/assets/functions/login.php');
 

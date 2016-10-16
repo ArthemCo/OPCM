@@ -1,6 +1,6 @@
 // NAVIGATION
 $nav-height-mobile: 3rem;
-$nav-height-desktop: 4rem;
+$nav-height-desktop: 4.5rem;
 
 
 // Z-Index
@@ -22,7 +22,7 @@ $z-index:(
 
 $brand-dark:    #5F7CB2;
 $brand:         #880015;
-$brand-light:   #FFE9BA;
+$brand-light:   #FCFBE3;
 $brand-hover:   #B29E71;
 
 $white :        #FFFFFF;
@@ -39,9 +39,9 @@ $border-color:  $gray-darker;
 // Typography
 // -------------------------
 
-$font-stack: 'PT Sans', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-stack: 'Scope One', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-$font-heading:         'Oranienbaum', serif;
+$font-heading:         'Lora', serif;
 $font-sans-serif:      $font-stack;
 
 $ultra-light: 200;

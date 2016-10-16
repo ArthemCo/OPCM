@@ -28,9 +28,9 @@ function joints_start() {
 //The default wordpress head is a mess. Let's clean it up by removing all the junk we don't need.
 function joints_head_cleanup() {
 	// Remove category feeds
-	// remove_action( 'wp_head', 'feed_links_extra', 3 );
+	remove_action( 'wp_head', 'feed_links_extra', 3 );
 	// Remove post and comment feeds
-	// remove_action( 'wp_head', 'feed_links', 2 );
+	remove_action( 'wp_head', 'feed_links', 2 );
 	// Remove EditURI link
 	remove_action( 'wp_head', 'rsd_link' );
 	// Remove Windows live writer
@@ -98,3 +98,17 @@ function joints_get_the_author_posts_link() {
 	);
 	return $link;
 }
+
+add_filter('show_admin_bar', '__return_false');
+
+function filter_ptags_on_images($content)
+{
+    // do a regular expression replace...
+    // find all p tags that have just
+    // <p>maybe some white space<img all stuff up to /> then maybe whitespace </p>
+    // replace it with just the image tag...
+    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+
+// we want it to be run after the autop stuff... 10 is default.
+add_filter('the_content', 'filter_ptags_on_images');

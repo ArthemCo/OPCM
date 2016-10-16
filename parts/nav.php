@@ -1,5 +1,10 @@
-<!-- Insert image from preferences or echo: -->
-<a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+<a href="<?php echo home_url(); ?>">
+	<?php if (get_theme_mod('opcm_header_logo') != '') : ?>
+		<img id="nav-logo" src="<?php echo get_theme_mod( 'opcm_header_logo');?>" alt="Logo" class="logo-img">
+
+	<?php else : bloginfo('name'); endif;?>
+
+</a>
 
 <?php joints_top_nav(); ?>
 

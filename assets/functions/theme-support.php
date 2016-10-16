@@ -21,6 +21,8 @@ function joints_theme_support() {
 	         	'comment-list', 
 	         	'comment-form', 
 	         	'search-form', 
+						'caption',
+						'gallery'
 	         ) 
 	);
 	

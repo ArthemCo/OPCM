@@ -5,6 +5,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
   font-weight: 300;
+	font-family: $font-heading;
 }
 
 h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;  }
@@ -26,4 +27,14 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0;       }
 
 p {
   margin-top: 0;
+}
+
+.entry-content {
+	margin-top: 2rem;
+	max-width: 720px;
+	margin: 0 auto;
+	@include font-size(20);
+	color: $brand-light;
+	font-weight: $light;
+	line-height: 1.5;
 }
