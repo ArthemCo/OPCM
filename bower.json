@@ -1,0 +1,27 @@
+{
+  "name": "OPCM",
+  "homepage": "https://github.com/ArthemCo/OPCM",
+  "authors": [
+    "Arthem Co."
+  ],
+  "description": "A custom WordPress Theme for Montreal's OPCM.",
+  "main": "app.js",
+  "keywords": [
+    "scss",
+    "js",
+    "WordPress",
+    "theme"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
