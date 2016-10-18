@@ -23,7 +23,7 @@
 			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 			<!-- Google Fonts -->
-			<link href="https://fonts.googleapis.com/css?family=Lora:700|Scope+One" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans" rel="stylesheet">
 
 			<?php wp_head(); ?>
 
@@ -33,6 +33,3 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<nav role="navigation" id="nav-global">
-		<?php get_template_part( 'parts/nav' ); ?>
-	</nav>

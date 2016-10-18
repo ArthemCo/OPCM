@@ -17,12 +17,13 @@ body {
     font-family: $font-sans-serif;
     @include font-size($font-size-base);
     -webkit-font-smoothing: antialiased;
+		-moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -moz-font-feature-settings: "liga", "kern";
     text-rendering: optimizelegibility;
     font-weight: $normal;
-    color: $white;
-    background: $gray-darker;
+    color: $gray-darker;
+    background: $gray-lighter;
         &.disable-scroll {
             height: 100%;
             width: 100%;

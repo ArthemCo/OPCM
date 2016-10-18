@@ -1,14 +1,11 @@
 /* main app logic
  * Arthem Co 2016
- * Michael Hemingway 
+ * Michael Hemingway
  */
 
 (function ($) {
 	'use strict';
 	$(document).ready(function () {
-
-		// Makes sure last grid item floats left
-		$('.archive-grid .columns').last().addClass('end');
 
 		// Adds Flex Video to YouTube and Vimeo Embeds
 		$('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').each(function () {

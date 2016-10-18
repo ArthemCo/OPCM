@@ -1,12 +1,5 @@
-#content {
-	margin-top: $nav-height-mobile;
-}
+// pushes text and article contents below nav, but not images that lie above that element
 
-@include media('>=desktop') {
-	#content {
-		margin-top: $nav-height-desktop;
-	}
-}
 
 .alignleft, .alignright {
 	width: 50%;

@@ -34,7 +34,7 @@ p {
 	max-width: 720px;
 	margin: 0 auto;
 	@include font-size(20);
-	color: $brand-light;
+	color: $gray-darker;
 	font-weight: $light;
 	line-height: 1.5;
 }

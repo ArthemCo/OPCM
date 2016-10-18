@@ -1,38 +1,60 @@
-<a href="<?php echo home_url(); ?>">
-	<?php if (get_theme_mod('opcm_header_logo') != '') : ?>
-		<img id="nav-logo" src="<?php echo get_theme_mod( 'opcm_header_logo');?>" alt="Logo" class="logo-img">
-
-	<?php else : bloginfo('name'); endif;?>
-
-</a>
-
-<?php joints_top_nav(); ?>
-
-<a href="#menu" id="nav-toggle">Menu</a>
-<?php
-$bool = false;
-// joints top nav and the above output the following:
-if ($bool == true) : ?>
-<!-- just getting html styling. remove on production -->
-
-<!-- user specified menu name -->
-<nav role="navigation" id="nav-global">
-		<ul class="menu">
-			<li>
-			<a href="http://localhost:8888/WPdev">OPCM</a>
-			</li>
-		</ul>
-
-		<div class="top-bar-right">
-			<ul id="menu-$" class="vertical medium-horizontal menu">
-					<li id="menu-item-$$" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13">
-						<a href="{{link}}">Orchestra</a>
-					</li>
-					<!-- ... -->
-			</ul>
+<a href="#nav" class="nav-trigger">Menu
+		<div class="nav-icon">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
 		</div>
 
-</nav>
-	<?php
-endif;
-?>
+		<svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+			<circle fill="transparent" stroke="#ffffff" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+		</svg>
+	</a>
+
+	<div id="nav" class="nav" role="navigation">
+		<div class="nav-wrapper">
+			<div class="half-block">
+				<h2><?php the_title(); ?></h2>
+
+				<nav>
+						<?php joints_top_nav(); ?>
+				</nav>
+			</div><!-- .half-block -->
+
+			<div class="half-block">
+				<address>
+					<ul class="contact-info">
+						<li><a href="mailto:info@myemail.co">info@myemail.co</a></li>
+						<li>0244-12345678</li>
+						<li>
+							<span>MyStreetName 24</span>
+							<span>W1234X</span>
+							<span>London, UK</span>
+						</li>
+					</ul>
+				</address>
+			</div> <!-- .half-block -->
+
+		</div> <!-- .navigation-wrapper -->
+	</div> <!-- .nav -->
+
+
+
+
+<!--
+
+
+<nav role="navigation" id="nav-global">
+<div class="nav-wrapper">
+	<a href="<?php echo home_url(); ?>">
+		<?php if (get_theme_mod('opcm_header_logo') != '') : ?>
+			<img id="nav-logo" src="<?php echo get_theme_mod( 'opcm_header_logo');?>" alt="Logo" class="logo-img">
+
+			<?php else : bloginfo('name'); endif;?>
+
+	</a>
+	<?php joints_top_nav(); ?>
+	</div>
+</nav>-->

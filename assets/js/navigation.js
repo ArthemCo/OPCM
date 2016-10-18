@@ -4,19 +4,40 @@
  */
 
 /*jslint browser:true */
-(function () {
-	'use strict';
+//
+//(function () {
+//	"use strict";
+//
+//	var hamburger = document.getElementById('nav-toggle'),
+//		nav = document.getElementById('nav-global');
+//
+//	hamburger.addEventListener("click", function () {
+//		this.classList.toggle("is-open");
+//		nav.classList.toggle('is-open');
+//	}, false);
+//
+//}());
 
-	// HELPER FUNCTIONS
-	var id = function (id) {
-		return document.getElementById(id);
-	};
 
-	document.addEventListener("DOMContentLoaded", function () {
-		id('nav-toggle').addEventListener("click", function () {
-			id('global-header').classList.toggle('nav-is-visible');
-			id('nav-container').classList.toggle('nav-is-visible');
-		});
+
+jQuery(document).ready(function($){
+	var isLateralNavAnimating = false,
+			hamburger = $('.nav-icon');
+	
+	//open/close lateral navigation
+	$('.nav-trigger').on('click', function(event){
+		event.preventDefault();
+		//stop if nav animation is running 
+		if( !isLateralNavAnimating ) {
+			if($(this).parents('.csstransitions').length > 0 ) isLateralNavAnimating = true; 
+			
+			$('body').toggleClass('navigation-is-open');
+			$('body').toggleClass('disable-scroll');
+			hamburger.toggleClass('is-open');
+			$('.navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				//animation is over
+				isLateralNavAnimating = false;
+			});
+		}
 	});
-
-}());
+});
