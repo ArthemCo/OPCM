@@ -3,6 +3,11 @@ $nav-height-mobile: 3rem;
 $nav-height-desktop: 4.5rem;
 
 
+@font-face {
+  font-family: 'Hythlo';
+  src: url('../fonts/hythlo.woff') format('woff');
+}
+
 // Z-Index
 //---------------
 
@@ -34,13 +39,19 @@ $gray:          #616161;
 $gray-light:    #979797;
 $gray-lighter:  #f2f2f2;
 
+// social colors
+$twitter-color:  #00aced;
+$facebook-color: #3b5998;
+$google-color:   #dd4b39;
+
 $border-color:  $gray-darker;
 
 // Typography
 // -------------------------
 
-$font-stack: 				sans-serif !default;
-$font-heading:      'Montserrat', serif;
+$font-stack: 				sans-serif !default; // default from browser.
+$font-heading:      'Montserrat', sans-serif;
+$font-serif: 				'Hythlo', serif;
 $font-sans-serif:   $font-stack;
 
 $ultra-light: 200;

@@ -45,18 +45,18 @@
 				</address>
 			</div> <!-- .half-block -->
 			<?php  if (get_theme_mod('opcm_nav_facebook') != '') : ?>
-				<a href="<?php echo get_theme_mod('opcm_nav_facebook');?>">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="facebook link" class="nav-social-media">
+				<a href="<?php echo get_theme_mod('opcm_nav_facebook');?>" class="nav-social-media fb">
+					<img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="facebook link">
 				</a>
 			<?php endif; ?>
 			<?php  if (get_theme_mod('opcm_nav_twitter') != '') : ?>
-				<a href="<?php echo get_theme_mod('opcm_nav_twitter');?>">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="twitter link" class="nav-social-media">
+				<a href="<?php echo get_theme_mod('opcm_nav_twitter');?>" class="nav-social-media tw">
+					<img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="twitter link" >
 				</a>
 			<?php endif; ?>
 			<?php  if (get_theme_mod('opcm_nav_youtube') != '') : ?>
-				<a href="<?php echo get_theme_mod('opcm_nav_youtube');?>">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/youtube.png" alt="facebook link" class="nav-social-media">
+				<a href="<?php echo get_theme_mod('opcm_nav_youtube');?>" class="nav-social-media yt">
+					<img src="<?php echo get_template_directory_uri();?>/assets/images/youtube.png" alt="youtube link">
 				</a>
 			<?php endif; ?>
 

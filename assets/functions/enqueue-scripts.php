@@ -19,7 +19,7 @@ function site_scripts() {
 	wp_enqueue_script( 'nav-js', get_template_directory_uri() . '/assets/js/navigation.js', array(), '1.0.2', true );
 	
 	// Register main stylesheet
-	wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.min.css', array(), '1.0.2', 'all' );
+	wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.min.css', array(), '1.0.3', 'all' );
 
 	// Comment reply script for threaded comments
 	if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
