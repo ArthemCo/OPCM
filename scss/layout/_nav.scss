@@ -39,13 +39,13 @@
 }
 
 .nav-trigger {
-	position: fixed;
+	position: absolute; // from 'fixed'
 	z-index: map-get($z-index, 'three');
 	right: 5%;
 	top: 20px;
 	height: 54px;
 	width: 54px;
-	background-color: $brand;
+	background-color: $black;
 	border-radius: 50%;
 	/* image replacement */
 	overflow: hidden;
@@ -88,7 +88,7 @@
 	height: 100%;
 	width: 100%;
 	background-color: $black;
-	color: $brand-light;
+	color: $white;
 	visibility: hidden;
 	transition: visibility 0s 0.7s;
 }
@@ -134,6 +134,7 @@
 	font-size: 1.3rem;
 	font-weight: 800;
 	text-transform: uppercase;
+	letter-spacing: normal;
 }
 
 .nav h2::after {
@@ -151,11 +152,38 @@
 	margin-top: 60px;
 }
 
-.current_page_item {
-	a {
-		color: $brand;
+
+.menu-item a {
+	color: $gray;
+	font-size: xx-large;
+	&:hover {
+		color: $white;
 	}
 }
+
+// social media images
+.nav-social-media {
+	max-width: 50px;
+	max-height: 50px;
+}
+
+.current_page_item {
+	a {
+		color: $brand-light;
+	}
+}
+
+// translation menu item integration
+.qtranxs-lang-menu {
+	padding-top: 2em;
+	a {
+		font-size: small;
+    padding-top: 30px;
+    border-bottom: 3px solid;
+	}
+}
+
+
 
 .no-touch .nav .nav-menu-container a:hover {
 	color: #ffffff;
@@ -190,35 +218,25 @@
 }
 
 
-//.no-js main {
-//  height: auto;
-//  overflow: visible;
-//}
-//
-//.no-js .nav {
-//  position: static;
-//  visibility: visible;
-//}
-//.no-js .nav .navigation-wrapper {
-//  height: auto;
-//  overflow: visible;
-//  padding: 100px 5%;
-//  -webkit-transform: translateX(0);
-//  -moz-transform: translateX(0);
-//  -ms-transform: translateX(0);
-//  -o-transform: translateX(0);
-//  transform: translateX(0);
-//}
-
-
-
-.menu-item a {
-	color: $brand-light;
-	font-size: xx-large;
-	&:hover {
-		color: $white;
-	}
+.no-js main {
+  height: auto;
+  overflow: visible;
 }
-.nav-social-media {
-	max-width: 50px;
+
+.no-js .nav {
+  position: static;
+  visibility: visible;
 }
+.no-js .nav .nav-wrapper {
+  height: auto;
+  overflow: visible;
+  padding: 100px 5%;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+
+

@@ -62,22 +62,3 @@
 
 		</div> <!-- .navigation-wrapper -->
 	</div> <!-- .nav -->
-
-
-
-
-<!--
-
-
-<nav role="navigation" id="nav-global">
-<div class="nav-wrapper">
-	<a href="<?php echo home_url(); ?>">
-		<?php if (get_theme_mod('opcm_header_logo') != '') : ?>
-			<img id="nav-logo" src="<?php echo get_theme_mod( 'opcm_header_logo');?>" alt="Logo" class="logo-img">
-
-			<?php else : bloginfo('name'); endif;?>
-
-	</a>
-	<?php joints_top_nav(); ?>
-	</div>
-</nav>-->

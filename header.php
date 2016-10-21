@@ -36,7 +36,7 @@
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
 
 	<?php wp_head(); ?>
 

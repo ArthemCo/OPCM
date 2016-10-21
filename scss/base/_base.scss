@@ -1,6 +1,3 @@
-// Scaffolding
-// --------------------------------------------------
-
 * {
     box-sizing: border-box;
 }
@@ -10,6 +7,8 @@
 html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 		-ms-overflow-style: -ms-autohiding-scrollbar;
+		-ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%
 }
 
 body {
@@ -21,6 +20,7 @@ body {
     -moz-font-feature-settings: "liga", "kern";
     text-rendering: optimizelegibility;
     font-weight: $normal;
+    overflow-x: hidden;
     color: $gray-darker;
     background: $gray-lighter;
         &.disable-scroll {

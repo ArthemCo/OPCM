@@ -17,7 +17,6 @@ Tags: Sass
 
 @import
 	'base/normalize',
-	'base/sanitize',
 	'base/base',
 	'base/typography';
 
@@ -25,7 +24,6 @@ Tags: Sass
 	'layout/spacing',
 	'layout/nav',
 	'layout/page',
-	'layout/flexbox',
 	'layout/grid';
 
 @import
