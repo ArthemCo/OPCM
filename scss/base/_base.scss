@@ -1,4 +1,3 @@
-//
 // Scaffolding
 // --------------------------------------------------
 
@@ -33,11 +32,11 @@ body {
 }
 
 ::-moz-selection {
-    background: $brand-light;
-    color: $black;
+    background: $black;
+    color: $brand-light;
 }
 
 ::selection {
-    background: $brand-light;
-    color: $black;
+    background: $black;
+    color: $brand-light;
 }

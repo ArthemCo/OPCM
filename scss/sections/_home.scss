@@ -1,0 +1,19 @@
+#hero {
+  height: 65vh;
+  width: 100%;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+
+#home-cta {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include transform(translate3d(-50%, -50%,0));
+  h1 {
+    @include font-size($font-size-h1);
+    color: $white;
+  }
+}

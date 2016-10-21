@@ -1,11 +1,14 @@
 // pushes text and article contents below nav, but not images that lie above that element
 
+#inner-content {
+	margin-top: 6rem;
+}
 
 .alignleft, .alignright {
 	width: 50%;
 	display: inline-block;
 	margin-bottom: 1em;
-	
+
 }
 .alignleft {
 	float: left;

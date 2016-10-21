@@ -1,3 +1,11 @@
+
+<a href="<?php echo home_url(); ?>">
+	<?php if (get_theme_mod('opcm_header_logo') != '') : ?>
+		<img id="nav-logo" src="<?php echo get_theme_mod( 'opcm_header_logo');?>" alt="Logo" class="logo-img">
+
+		<?php else : bloginfo('name'); endif;?>
+</a>
+
 <a href="#nav" class="nav-trigger">Menu
 		<div class="nav-icon">
 		<span></span>
@@ -36,6 +44,21 @@
 					</ul>
 				</address>
 			</div> <!-- .half-block -->
+			<?php  if (get_theme_mod('opcm_nav_facebook') != '') : ?>
+				<a href="<?php echo get_theme_mod('opcm_nav_facebook');?>">
+					<img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="facebook link" class="nav-social-media">
+				</a>
+			<?php endif; ?>
+			<?php  if (get_theme_mod('opcm_nav_twitter') != '') : ?>
+				<a href="<?php echo get_theme_mod('opcm_nav_twitter');?>">
+					<img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="twitter link" class="nav-social-media">
+				</a>
+			<?php endif; ?>
+			<?php  if (get_theme_mod('opcm_nav_youtube') != '') : ?>
+				<a href="<?php echo get_theme_mod('opcm_nav_youtube');?>">
+					<img src="<?php echo get_template_directory_uri();?>/assets/images/youtube.png" alt="facebook link" class="nav-social-media">
+				</a>
+			<?php endif; ?>
 
 		</div> <!-- .navigation-wrapper -->
 	</div> <!-- .nav -->
