@@ -134,12 +134,6 @@ function opcm_customizer_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'opcm_customizer_register' );
 
-// Default options transport to js
-function opcm_customize_register( $wp_customize ) {
-	$wp_customize->remove_section( 'static_front_page' );
-}
-add_action( 'customize_register', 'opcm_customize_register' );
-
 // Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
 function opcm_customize_preview_js() {
 	wp_enqueue_script( 'opcm_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true );
