@@ -46,6 +46,12 @@
 	top: 20px;
 }
 
+.nav-trigger:hover {
+	circle {
+		stroke-dashoffset: -120; // fekin cool
+	}
+}
+
 .nav-icon.is-open span:nth-child(1),
 .nav-icon.is-open span:nth-child(6) {
 	-webkit-transform: rotate(45deg);

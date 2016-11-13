@@ -40,9 +40,9 @@
 							<?php echo get_theme_mod('opcm_nav_tel'); ?>
 						</a></li>
 						<li>
-							<span></span>
-							<span>W1234X</span>
-							<span>London, UK</span>
+							<span>222 Laval</span>
+							<span>h4v1C4</span>
+							<span>Montreal, QC</span>
 						</li>
 					</ul>
 				</address>
