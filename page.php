@@ -2,7 +2,7 @@
 
 	<div id="content">
 
-	<?php if ( has_post_thumbnail()) : the_post_thumbnail();  endif; ?>
+	<?php if ( has_post_thumbnail()) : the_post_thumbnail('large');  endif; ?>
 
 		<div id="inner-content">
 
