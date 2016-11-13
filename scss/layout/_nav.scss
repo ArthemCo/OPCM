@@ -162,23 +162,40 @@
 		color: $white;
 	}
 }
+.nav-social-media {
+	position: relative;
+}
 
 // social media images
-.nav-social-media img {
-	max-width: 50px;
-	max-height: 50px;
+.nav-social-media img, .nav-social-bg  {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	z-index: 3;
+}
+
+.nav-social-bg {
+	background-color: transparent;
+	transition: background .2s ease;
+	z-index: 2;
 }
 
 .nav-social-media.yt:hover {
-	background-color: $google-color;
+	.nav-social-bg.yt {
+		background-color: $google-color;
+	}
 }
 
 .nav-social-media.tw:hover {
-	background: $twitter-color;
+	.nav-social-bg.tw {
+		background-color: $twitter-color;
+	}
 }
 
 .nav-social-media.fb:hover {
-	background: $facebook-color;
+	.nav-social-bg.fb {
+		background-color: $facebook-color;
+	}
 }
 
 .current_page_item {

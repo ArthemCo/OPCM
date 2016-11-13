@@ -1,0 +1,31 @@
+{
+  "name": "opcm",
+  "version": "1.0.0",
+  "description": "A bespoke theme for Montreal's foremost non-profit orchestra, the OPCM",
+  "main": "assets/js/app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthemCo/OPCM.git"
+  },
+  "keywords": [
+    "responsive",
+    "web",
+    "WordPress",
+    "orchestra",
+    "theme"
+  ],
+  "author": "Michael Hemingway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArthemCo/OPCM/issues"
+  },
+  "homepage": "https://github.com/ArthemCo/OPCM#readme",
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}

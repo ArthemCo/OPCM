@@ -26,8 +26,7 @@ function opcm_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting( 'home_img' );
 	$wp_customize->add_control(
 		new WP_Customize_Image_Control(
-			$wp_customize,
-			'bs_bg_d', array(
+			$wp_customize, 'bs_bg_d', array( // hrmm
 				'label'    => __( 'Home page banner', 'opcm' ),
 				'section'  => 'section_home',
 				'settings' => 'home_img',
@@ -39,8 +38,7 @@ function opcm_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting( 'home_CTA_text' );
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize,
-			'home_CTA_text', array(
+			$wp_customize, 'home_CTA_text', array(
 				'label'    => __( 'Home page banner', 'opcm' ),
 				'section'  => 'section_home',
 				'settings' => 'home_CTA_text',
@@ -52,9 +50,7 @@ function opcm_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting('home_CTA_link', array('default' => '-1'));
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize,
-			'home_CTA_link',
-			array(
+			$wp_customize, 'home_CTA_link', array(
 				'label'     => __('Call to action page', 'opcm'),
 				'section'   => 'section_home',
 				'settings'  => 'home_CTA_link',
@@ -68,9 +64,7 @@ function opcm_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting('home_CTA_link_text');
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize,
-			'home_CTA_link_text',
-			array(
+			$wp_customize, 'home_CTA_link_text', array(
 				'label'     => __('Call to action button text', 'opcm'),
 				'section'   => 'section_home',
 				'settings'  => 'home_CTA_link_text',
@@ -84,8 +78,7 @@ function opcm_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting( 'opcm_header_logo' );
 	$wp_customize->add_control(
 		new WP_Customize_Image_Control(
-			$wp_customize,
-			'header_logo', array(
+			$wp_customize, 'header_logo', array(
 				'label'    => __('Header Logo', 'opcm'),
 				'section'  => 'title_tagline',
 				'settings' => 'opcm_header_logo',
@@ -93,12 +86,49 @@ function opcm_customizer_register( $wp_customize ) {
 		)
 	);
 
+	// Add nav info to existing title section
+	$wp_customize->add_setting( 'opcm_nav_email' );
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize, 'opcm_nav_email', array(
+				'label'    => __('Email Contact', 'opcm'),
+				'section'  => 'title_tagline',
+				'settings' => 'opcm_nav_email',
+			)
+		)
+	);
+
+	// Add nav info to existing title section
+	$wp_customize->add_setting( 'opcm_nav_tel' );
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize, 'opcm_nav_tel', array(
+				'label'    => __('Telephone Number', 'opcm'),
+				'section'  => 'title_tagline',
+				'settings' => 'opcm_nav_tel',
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'opcm_nav_show_info', array('default'  => '1'));
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize, 'opcm_nav_show_info', array(
+				'label'	   => __('Show Contact info', 'opcm'),
+				'section'  => 'title_tagline',
+				'settings' => 'opcm_nav_show_info',
+				'type'     => 'checkbox'
+			)
+		)
+	);
+
+	// street adress ?
+
 	// Same thing, add social media icons
 	$wp_customize->add_setting( 'opcm_nav_facebook' );
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize,
-			'opcm_nav_facebook', array(
+			$wp_customize, 'opcm_nav_facebook', array(
 				'label'    => __( 'Facebook link', 'opcm' ),
 				'section'  => 'title_tagline',
 				'settings' => 'opcm_nav_facebook',
@@ -109,8 +139,7 @@ function opcm_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting( 'opcm_nav_twitter' );
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize,
-			'opcm_nav_twitter', array(
+			$wp_customize, 'opcm_nav_twitter', array(
 				'label'    => __( 'Twitter link', 'opcm' ),
 				'section'  => 'title_tagline',
 				'settings' => 'opcm_nav_twitter',
@@ -121,8 +150,7 @@ function opcm_customizer_register( $wp_customize ) {
 	$wp_customize->add_setting( 'opcm_nav_youtube' );
 	$wp_customize->add_control(
 		new WP_Customize_Control(
-			$wp_customize,
-			'opcm_nav_youtube', array(
+			$wp_customize, 'opcm_nav_youtube', array(
 				'label'    => __( 'YouTube link', 'opcm' ),
 				'section'  => 'title_tagline',
 				'settings' => 'opcm_nav_youtube',
