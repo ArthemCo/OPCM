@@ -46,10 +46,8 @@
 	top: 20px;
 }
 
-.nav-trigger:hover {
-	circle {
-		stroke-dashoffset: -120; // fekin cool
-	}
+.no-touch .nav-trigger:hover circle {
+	stroke-dashoffset: -120; // fekin cool
 }
 
 .nav-icon.is-open span:nth-child(1),
