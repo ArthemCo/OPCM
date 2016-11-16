@@ -2,7 +2,12 @@
 
 	<div id="content">
 
-	<?php if ( has_post_thumbnail()) : the_post_thumbnail('large');  endif; ?>
+
+	<?php if ( has_post_thumbnail()) : ?>
+		<div class="page-featured-image">
+			<?php the_post_thumbnail('large'); ?>
+		</div>
+	<?php endif; ?>
 
 		<div id="inner-content">
 

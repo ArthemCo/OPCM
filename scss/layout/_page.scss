@@ -26,3 +26,39 @@ article.page {
 footer {
 	text-align: center;
 }
+@include media('>desktop') {
+	.page-template-default {
+		.page-featured-image {
+			width: 33vw;
+			height: 100%;
+			overflow: hidden;
+			position: fixed;
+			top: 0px;
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
+		#inner-content, .footer {
+			margin-left: 33vw;
+		}
+	}
+}
+
+.page article.has-post-thumbnail {
+	background: $gray-lighter;
+}
+.entry-content, .page-title, .inner-footer {
+	  max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+.entry-content {
+	@include font-size(20);
+  font-family: serif;
+	color: $gray-darker;
+	font-weight: $light;
+	line-height: 1.5;
+  margin-top: 2rem;
+}

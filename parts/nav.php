@@ -32,7 +32,7 @@
 			</div><!-- .half-block -->
 
 			<?php if (get_theme_mod('opcm_nav_show_info') === true): ?>
-			<div class="half-block">
+			<div class="half-block info">
 				<address>
 					<ul class="contact-info">
 						<li><a href="mailto:<?php echo get_theme_mod('opcm_nav_email'); ?>"><?php echo get_theme_mod('opcm_nav_email'); ?></a></li>
@@ -40,33 +40,35 @@
 							<?php echo get_theme_mod('opcm_nav_tel'); ?>
 						</a></li>
 						<li>
-							<span>222 Laval</span>
-							<span>h4v1C4</span>
-							<span>Montreal, QC</span>
+							<span><?php echo get_theme_mod('opcm_nav_address_line_1'); ?></span>
+							<span><?php echo get_theme_mod('opcm_nav_address_line_2'); ?></span>
+							<span><?php echo get_theme_mod('opcm_nav_address_line_3'); ?></span>
 						</li>
 					</ul>
 				</address>
+
+				<?php  if (get_theme_mod('opcm_nav_facebook') != '') : ?>
+					<a href="<?php echo get_theme_mod('opcm_nav_facebook');?>" class="nav-social-media fb">
+						<div class="nav-social-bg fb"></div>
+						<img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="facebook link">
+					</a>
+				<?php endif; ?>
+				<?php  if (get_theme_mod('opcm_nav_twitter') != '') : ?>
+					<a href="<?php echo get_theme_mod('opcm_nav_twitter');?>" class="nav-social-media tw">
+						<div class="nav-social-bg tw"></div>
+						<img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="twitter link" />
+					</a>
+				<?php endif; ?>
+				<?php  if (get_theme_mod('opcm_nav_youtube') != '') : ?>
+					<a href="<?php echo get_theme_mod('opcm_nav_youtube');?>" class="nav-social-media yt">
+						<div class="nav-social-bg yt"></div>
+						<img src="<?php echo get_template_directory_uri();?>/assets/images/youtube.png" alt="youtube link">
+					</a>
+				<?php endif; ?>
 			</div>
 		<?php endif; ?>
 
-		<?php  if (get_theme_mod('opcm_nav_facebook') != '') : ?>
-			<a href="<?php echo get_theme_mod('opcm_nav_facebook');?>" class="nav-social-media fb">
-				<div class="nav-social-bg fb"></div>
-				<img src="<?php echo get_template_directory_uri();?>/assets/images/facebook.png" alt="facebook link">
-			</a>
-		<?php endif; ?>
-		<?php  if (get_theme_mod('opcm_nav_twitter') != '') : ?>
-			<a href="<?php echo get_theme_mod('opcm_nav_twitter');?>" class="nav-social-media tw">
-				<div class="nav-social-bg tw"></div>
-				<img src="<?php echo get_template_directory_uri();?>/assets/images/twitter.png" alt="twitter link" />
-			</a>
-		<?php endif; ?>
-		<?php  if (get_theme_mod('opcm_nav_youtube') != '') : ?>
-			<a href="<?php echo get_theme_mod('opcm_nav_youtube');?>" class="nav-social-media yt">
-				<div class="nav-social-bg yt"></div>
-				<img src="<?php echo get_template_directory_uri();?>/assets/images/youtube.png" alt="youtube link">
-			</a>
-		<?php endif; ?>
+
 
 		</div> <!-- .navigation-wrapper -->
 	</div> <!-- .nav -->

@@ -110,6 +110,40 @@ function opcm_customizer_register( $wp_customize ) {
 		)
 	);
 
+	// Add nav info to existing title section => address line 1
+	$wp_customize->add_setting( 'opcm_nav_address_line_1' );
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize, 'opcm_nav_address_line_1', array(
+				'label'    => __('Address line one', 'opcm'),
+				'section'  => 'title_tagline',
+				'settings' => 'opcm_nav_address_line_1',
+			)
+		)
+	);
+	// Add nav info to existing title section => address line 2
+	$wp_customize->add_setting( 'opcm_nav_address_line_2' );
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize, 'opcm_nav_address_line_2', array(
+				'label'    => __('Address line two', 'opcm'),
+				'section'  => 'title_tagline',
+				'settings' => 'opcm_nav_address_line_2',
+			)
+		)
+	);
+	// Add nav info to existing title section => address line 3
+	$wp_customize->add_setting( 'opcm_nav_address_line_3' );
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize, 'opcm_nav_address_line_3', array(
+				'label'    => __('Address line three', 'opcm'),
+				'section'  => 'title_tagline',
+				'settings' => 'opcm_nav_address_line_3',
+			)
+		)
+	);
+
 	$wp_customize->add_setting( 'opcm_nav_show_info', array('default'  => '1'));
 	$wp_customize->add_control(
 		new WP_Customize_Control(
