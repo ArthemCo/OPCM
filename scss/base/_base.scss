@@ -22,12 +22,11 @@ body {
     font-weight: $normal;
     overflow-x: hidden;
     color: $gray-darker;
-    background: $white;
+    background-color: $white;
         &.disable-scroll {
             height: 100%;
             width: 100%;
             overflow: hidden;
-            background: $brand;
         }
 }
 

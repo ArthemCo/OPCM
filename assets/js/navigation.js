@@ -14,7 +14,7 @@
 		//open/close lateral navigation
 		$('.nav-trigger').on('click', function (event) {
 			event.preventDefault();
-			body.toggleClass('navigation-is-open');
+			body.toggleClass('disable-scroll navigation-is-open');
 			hamburger.toggleClass('is-open');
 		});
 	});

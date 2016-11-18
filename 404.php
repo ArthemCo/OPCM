@@ -1,31 +1,17 @@
 <?php get_header(); ?>
-			
+
 	<div id="content">
-
-		<div id="inner-content" class="row">
-	
-			<main id="main" class="large-8 medium-8 columns" role="main">
-
-				<article id="content-not-found">
-				
+		<div id="inner-content" class="container">
+			<main id="main" role="main">
+				<article id="content-not-found" class="entry-content row">
 					<header class="article-header">
-						<h1><?php _e( 'Epic 404 - Article Not Found', 'jointswp' ); ?></h1>
-					</header> <!-- end article header -->
-			
-					<section class="entry-content">
-						<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'jointswp' ); ?></p>
-					</section> <!-- end article section -->
-
-					<section class="search">
-					    <p><?php get_search_form(); ?></p>
-					</section> <!-- end search section -->
-			
-				</article> <!-- end article -->
-	
-			</main> <!-- end #main -->
-
-		</div> <!-- end #inner-content -->
-
-	</div> <!-- end #content -->
-
+						<h1><?php _e( '404 - Article Not Found', 'jointswp' ); ?></h1>
+					</header>
+					<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'jointswp' ); ?></p>
+					<?php get_search_form(); ?>
+				</article>
+			</main>
+		</div>
+	</div>
+	<?php get_template_part( 'parts/nav' ); ?>
 <?php get_footer(); ?>

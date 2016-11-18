@@ -1,7 +1,6 @@
 @import 'hamburger';
 #content {
-	z-index: 2;
-	/* fix bug on iOS */
+	z-index: map-get($z-index, 'two');
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 }
@@ -15,14 +14,14 @@
 	position: absolute;
 	top: $spacer;
 	left: $spacer;
-	z-index: map-get($z-index, 'four');
+	z-index: map-get($z-index, 'two');
 }
 
 .nav-trigger {
-	position: absolute; // from 'fixed'
-	z-index: map-get($z-index, 'three');
+	position: fixed; // from 'fixed'
+	z-index: map-get($z-index, 'four');
 	right: $spacer+10px;
-	top: $spacer;
+	bottom: $spacer;
 	height: 54px;
 	width: 54px;
 	background-color: $brand;
@@ -54,23 +53,18 @@
 	transition: stroke-dashoffset 0.4s 0.3s;
 }
 
-@media only screen and (min-width: 1170px) {
-	.nav-trigger {
-		top: 40px;
-	}
-}
-
 .nav {
 	position: fixed;
-	z-index: 3;
+	z-index: map-get($z-index, 'three');
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
 	background-color: $brand-dark;
 	color: $black;
-	opacity: 0;
-	transition: opacity 0.4s $easeInOutQuad;
+	-webkit-backface-visibilty: hidden;
+	@include transform(translate3D(-100%,0,0));
+	transition: transform 0.4s $easeInOutExpo;
 }
 
 .nav .nav-wrapper {
@@ -78,11 +72,11 @@
 	height: 100%;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	padding: 100px 5% 40px calc(5% + 5px);
+	padding: $spacer 5% 40px calc(5% + #{$spacer});
 }
 
 .navigation-is-open .nav {
-	opacity: 1;
+	@include transform(translate3D(0,0,0));
 }
 
 .navigation-is-open .nav .nav-wrapper {
