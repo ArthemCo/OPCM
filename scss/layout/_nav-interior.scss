@@ -24,17 +24,17 @@
 }
 
 .menu-item a {
-	color: $gray;
-	font-family: $font-sans-serif;
+	color: $white;
+	font-family: $font-heading;
   @include font-size(25);
 	transition: color .2s ease;
 	&:hover {
-		color: $white;
+		color: $brand;
 	}
 }
 
 .current_page_item a{
-	color: $brand-light;
+	color: $brand;
 }
 
 // translation menu item integration

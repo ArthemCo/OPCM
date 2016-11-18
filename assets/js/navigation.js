@@ -7,24 +7,15 @@
 //
 (function () {
 	jQuery(document).ready(function ($) {
-		var isLateralNavAnimating = false,
+		var
 			body = $('body'),
 			hamburger = $('.nav-icon');
 
 		//open/close lateral navigation
 		$('.nav-trigger').on('click', function (event) {
 			event.preventDefault();
-			//stop if nav animation is running
-			if (!isLateralNavAnimating) {
-				if ($(this).parents('.csstransitions').length > 0) isLateralNavAnimating = true;
-
-				body.toggleClass('navigation-is-open');
-				hamburger.toggleClass('is-open');
-				$('.nav-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
-					//animation is over
-					isLateralNavAnimating = false;
-				});
-			}
+			body.toggleClass('navigation-is-open');
+			hamburger.toggleClass('is-open');
 		});
 	});
 

@@ -34,6 +34,7 @@ footer {
 			overflow: hidden;
 			position: fixed;
 			top: 0px;
+			z-index: 3;
 			img {
 				height: 100%;
 				width: auto;
@@ -45,9 +46,6 @@ footer {
 	}
 }
 
-.page article.has-post-thumbnail {
-	background: $gray-lighter;
-}
 .entry-content, .page-title, .inner-footer {
 	  max-width: 600px;
 		margin-left: auto;
@@ -56,8 +54,7 @@ footer {
 
 .entry-content {
 	@include font-size(20);
-  font-family: serif;
-	color: $gray-darker;
+  font-family: $font-serif;
 	font-weight: $light;
 	line-height: 1.5;
   margin-top: 2rem;

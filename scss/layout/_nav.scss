@@ -1,49 +1,28 @@
 @import 'hamburger';
 #content {
-	position: relative;
 	z-index: 2;
 	/* fix bug on iOS */
-	height: 100vh;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	background-color: $gray-lighter;
-	/* Force Hardware Acceleration in WebKit */
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	transform: translateZ(0);
-	backface-visibility: hidden;
-	transition: transform 0.7s;
-	transition-timing-function: cubic-bezier(0.91, 0.01, 0.6, 0.99);
 }
 
 .navigation-is-open #content {
-	-webkit-transform: translateX(100%);
-	-moz-transform: translateX(100%);
-	-ms-transform: translateX(100%);
-	transform: translateX(100%);
 }
 
 #nav-logo {
-	width: 150px;
+	height: 40px;
+	width: auto;
 	position: absolute;
-	top: 15px;
-	left: 5%;
-	z-index: 4;
-	@include transform(translate3D(0, 0, 0));
-	@include transition(transform .6s ease);
-	transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
-}
-
-.navigation-is-open #nav-logo {
-	@include transform(translate3D(-40%, 120%, 0) rotate(-90deg));
+	top: $spacer;
+	left: $spacer;
+	z-index: map-get($z-index, 'four');
 }
 
 .nav-trigger {
 	position: absolute; // from 'fixed'
 	z-index: map-get($z-index, 'three');
-	right: 5%;
-	top: 20px;
+	right: $spacer+10px;
+	top: $spacer;
 	height: 54px;
 	width: 54px;
 	background-color: $brand;
@@ -83,15 +62,15 @@
 
 .nav {
 	position: fixed;
-	z-index: 1;
+	z-index: 3;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: $black;
-	color: $white;
-	visibility: hidden;
-	transition: visibility 0s 0.7s;
+	background-color: $brand-dark;
+	color: $black;
+	opacity: 0;
+	transition: opacity 0.4s $easeInOutQuad;
 }
 
 .nav .nav-wrapper {
@@ -99,34 +78,15 @@
 	height: 100%;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	padding: 60px 5% 40px calc(5% + 100px);
-	/* Force Hardware Acceleration in WebKit */
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
-	-ms-transform: translateZ(0);
-	transform: translateZ(0);
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
-	transition: transform 0.7s;
-	transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+	padding: 100px 5% 40px calc(5% + 5px);
 }
 
 .navigation-is-open .nav {
-	visibility: visible;
-	transition: visibility 0s 0s;
+	opacity: 1;
 }
 
 .navigation-is-open .nav .nav-wrapper {
-	-webkit-transform: translateX(0);
-	-moz-transform: translateX(0);
-	-ms-transform: translateX(0);
-	transform: translateX(0);
-	transition: transform 0.5s;
-	transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+
 }
 
 @import 'nav-interior';
@@ -145,8 +105,4 @@
 	height: auto;
 	overflow: visible;
 	padding: 100px 5%;
-	-webkit-transform: translateX(0);
-	-moz-transform: translateX(0);
-	-ms-transform: translateX(0);
-	transform: translateX(0);
 }

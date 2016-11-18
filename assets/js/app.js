@@ -3,9 +3,10 @@
  * Michael Hemingway
  */
 
-(function () {
+(function ($) {
 	'use strict';
-	document.addEventlistener('load', function () {
+	$(function () {
 
 	});
-}());
+
+}(jQuery));

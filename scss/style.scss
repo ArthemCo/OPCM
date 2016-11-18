@@ -13,6 +13,7 @@ Tags: Sass
 ******************************************************************/
 
 @import
+	'variables',
 	'utils/utilities'; // Grabs all files in folder
 
 @import
@@ -24,6 +25,7 @@ Tags: Sass
 	'layout/spacing',
 	'layout/nav',
 	'layout/page',
+	'layout/footer',
 	'layout/grid';
 
 @import
