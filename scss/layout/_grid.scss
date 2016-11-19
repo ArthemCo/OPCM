@@ -14,7 +14,6 @@
 	width: 100%;
 	max-width: $container-width;
 	margin: 0 auto;
-	padding: 0 20px;
 	box-sizing: border-box;
 }
 
@@ -26,15 +25,14 @@
 }
 
 // For devices larger than 400px
-@include media('<phone') {
+@include media('>phone') {
 	.container {
 		width: $container-width-larger-than-mobile;
-		padding: 0;
 	}
 }
 
 // For devices larger than 550px
-@include media('<phablet') {
+@include media('>phablet') {
 	.container {
 		width: $container-width-larger-than-phablet;
 	}

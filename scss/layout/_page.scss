@@ -1,7 +1,16 @@
 // pushes text and article contents below nav, but not images that lie above that element
 
 #inner-content {
-	margin-top: 6rem;
+	margin-top: 5rem;
+	min-height: 100vh;
+	padding-bottom: 2rem;
+  /* equal to footer height */
+  margin-bottom: -142px;
+	&:after {
+	  content: "";
+	  display: block;
+		height: 142px;
+	}
 }
 
 .alignleft, .alignright {
@@ -12,15 +21,13 @@
 }
 .alignleft {
 	float: left;
+	margin-left: 0px;
 	margin-right: 1em;
 }
 .alignright {
 	float: right;
+	margin-right: 0px;
 	margin-left: 1em;
-}
-
-article.page {
-	margin-top: 2rem;
 }
 
 footer {
@@ -40,13 +47,16 @@ footer {
 				width: auto;
 			}
 		}
-		#inner-content, .footer {
-			margin-left: 33vw;
+		.page-featured-image + #inner-content{
+				margin-left: 33vw;
+		}
+		.footer{
+				margin-left: 33vw;
 		}
 	}
 }
 
-.entry-content, .page-title, .inner-footer {
+.entry-content, .page-title, .inner-footer, #home-blocks {
 	  max-width: 600px;
 		margin-left: auto;
 		margin-right: auto;

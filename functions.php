@@ -30,16 +30,16 @@ require_once(get_template_directory().'/assets/functions/disable-emoji.php');
 //require_once(get_template_directory().'/assets/functions/editor-styles.php');
 
 // Related post function - no need to rely on plugins
-// require_once(get_template_directory().'/assets/functions/related-posts.php');
+require_once(get_template_directory().'/assets/functions/related-posts.php');
 
 // Use this as a template for custom post types
 // require_once(get_template_directory().'/assets/functions/custom-post-type.php');
 
 // Add options page to hold semi-permanent values
-require_once(get_template_directory().'/assets/functions/customizer.php'); 
+require_once(get_template_directory().'/assets/functions/customizer.php');
 
 // Customize the WordPress login menu
 require_once(get_template_directory().'/assets/functions/login.php');
 
 // Customize the WordPress admin
-require_once(get_template_directory().'/assets/functions/admin.php'); 
+require_once(get_template_directory().'/assets/functions/admin.php');

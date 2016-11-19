@@ -1,0 +1,12 @@
+.footer {
+  background: $black;
+  padding: 2em;
+  height: 142px;
+  a, p {
+    color: $gray-light;
+  }
+  a:hover {
+    text-decoration: underline;
+
+  }
+}

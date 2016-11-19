@@ -1,14 +1,16 @@
-$brand-dark: #5F7CB2;
-$brand: #880015;
-$brand-light: #FFE9BA;
-$brand-hover: #B29E71;
-$white: #FFFFFF;
-$black: #000000;
-$gray-darker: #111;
-$gray-dark: #6c767f;
-$gray: #616161;
-$gray-light: #979797;
-$gray-lighter: #f2f2f2;
+$brand-dark:    #006989;
+$brand:         #880015;
+$brand-light:   #D3D0CB;
+$brand-hover:   $brand-dark;
+
+$white :        #EAEBED;
+$black :        #000000;
+
+$gray-darker:   #313130;
+$gray-dark:     #6c767f;
+$gray:          #616161;
+$gray-light:    #979797;
+$gray-lighter:  #f2f2f2;
 // update to something better suited
 .login h1 a {
     background: url("../images/login-logo.png") top center no-repeat;
