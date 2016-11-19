@@ -4,11 +4,13 @@ function site_scripts() {
 
 	// VENDOR
 	// wp_enqueue_script( 'smoothstate-js', get_template_directory_uri() . '/assets/js/vendor/smoothstate/jquery.smoothstate.min.js', array(), '1.0', true );
-	// wp_enqueue_script( 'scrollreveal-js', get_template_directory_uri() . '/assets/js/vendor/scrollreveal/dist/scrollreveal.min.js', array(), '1.0', true );
+	//wp_enqueue_script( 'scrollreveal-js', get_template_directory_uri() . '/assets/js/vendor/scrollreveal/dist/scrollreveal.min.js', array(), '1.0', true );
 	// custom modernizr in <head>
 	wp_enqueue_script('modernizr', get_template_directory_uri() . '/assets/js/modernizr.js', array(), '1.0', false );
 	//  END VENDOR
-	wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/app.js', array(), '1.0.2', true );
+
+  // switched to mini for prod
+	wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/app.js', array(), '1.0.3', true );
 	wp_enqueue_script( 'nav-js', get_template_directory_uri() . '/assets/js/navigation.js', array(), '1.0.4', true );
 
 	// Register main stylesheet

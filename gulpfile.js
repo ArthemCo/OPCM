@@ -25,9 +25,9 @@ gulp.task('browserSync', function () {
 });
 
 gulp.task('minify', function () {
-	return gulp.src(['assets/js/modernizr.js', 'assets/js/app.js'])
+	return gulp.src(['assets/js/modernizr.js', 'assets/js/app.js', 'assets/js/navigation.js'])
 		.pipe(concat({ path: 'assets/js/app.min.js', stat: { mode: 0666 } }))
-		.pipe(gulp.dest('./dist'));
+		.pipe(gulp.dest('assets/js/'));
 });
 
 // starts the whole b'doodler up

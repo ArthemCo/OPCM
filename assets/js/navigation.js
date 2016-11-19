@@ -5,8 +5,8 @@
 
 /*jslint browser:true */
 //
-(function () {
-	jQuery(document).ready(function ($) {
+(function ($) {
+	$(function () {
 		var
 			body = $('body'),
 			hamburger = $('.nav-icon');
@@ -18,5 +18,4 @@
 			hamburger.toggleClass('is-open');
 		});
 	});
-
-}());
+}(jQuery));
