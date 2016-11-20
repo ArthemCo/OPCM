@@ -76,62 +76,62 @@ function opcm_customizer_register( $wp_customize ) {
 		)
 	);
 
-	// Feature One
-	$wp_customize->add_setting('home_feature_one', array('default' => '-1'));
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize, 'home_feature_one', array(
-				'label'     => __('Featured Block 1', 'opcm'),
-				'section'   => 'section_home',
-				'settings'  => 'home_feature_one',
-				'priority'  => 3,
-				'type'      => 'dropdown-pages',
-				'description'=> __('Send users directly to a page from your homescreen, prioritizing that content.', 'opcm'),
-			)
-		)
-	);
-
-	// Feature Two
-	$wp_customize->add_setting('home_feature_two', array('default' => '-1'));
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize, 'home_feature_two', array(
-				'label'     => __('Featured Block 2', 'opcm'),
-				'section'   => 'section_home',
-				'settings'  => 'home_feature_two',
-				'priority'  => 3,
-				'type'      => 'dropdown-pages'
-			)
-		)
-	);
-
-	// Feature Three
-	$wp_customize->add_setting('home_feature_three', array('default' => '-1'));
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize, 'home_feature_three', array(
-				'label'     => __('Featured Block 3', 'opcm'),
-				'section'   => 'section_home',
-				'settings'  => 'home_feature_three',
-				'priority'  => 3,
-				'type'      => 'dropdown-pages'
-			)
-		)
-	);
-
-	// Feature Four
-	$wp_customize->add_setting('home_feature_four', array('default' => '-1'));
-	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize, 'home_feature_four', array(
-				'label'     => __('Featured Block 4', 'opcm'),
-				'section'   => 'section_home',
-				'settings'  => 'home_feature_four',
-				'priority'  => 3,
-				'type'      => 'dropdown-pages'
-			)
-		)
-	);
+	// // Feature One
+	// $wp_customize->add_setting('home_feature_one', array('default' => '-1'));
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Control(
+	// 		$wp_customize, 'home_feature_one', array(
+	// 			'label'     => __('Featured Block 1', 'opcm'),
+	// 			'section'   => 'section_home',
+	// 			'settings'  => 'home_feature_one',
+	// 			'priority'  => 3,
+	// 			'type'      => 'dropdown-pages',
+	// 			'description'=> __('Send users directly to a page from your homescreen, prioritizing that content.', 'opcm'),
+	// 		)
+	// 	)
+	// );
+	//
+	// // Feature Two
+	// $wp_customize->add_setting('home_feature_two', array('default' => '-1'));
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Control(
+	// 		$wp_customize, 'home_feature_two', array(
+	// 			'label'     => __('Featured Block 2', 'opcm'),
+	// 			'section'   => 'section_home',
+	// 			'settings'  => 'home_feature_two',
+	// 			'priority'  => 3,
+	// 			'type'      => 'dropdown-pages'
+	// 		)
+	// 	)
+	// );
+	//
+	// // Feature Three
+	// $wp_customize->add_setting('home_feature_three', array('default' => '-1'));
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Control(
+	// 		$wp_customize, 'home_feature_three', array(
+	// 			'label'     => __('Featured Block 3', 'opcm'),
+	// 			'section'   => 'section_home',
+	// 			'settings'  => 'home_feature_three',
+	// 			'priority'  => 3,
+	// 			'type'      => 'dropdown-pages'
+	// 		)
+	// 	)
+	// );
+	//
+	// // Feature Four
+	// $wp_customize->add_setting('home_feature_four', array('default' => '-1'));
+	// $wp_customize->add_control(
+	// 	new WP_Customize_Control(
+	// 		$wp_customize, 'home_feature_four', array(
+	// 			'label'     => __('Featured Block 4', 'opcm'),
+	// 			'section'   => 'section_home',
+	// 			'settings'  => 'home_feature_four',
+	// 			'priority'  => 3,
+	// 			'type'      => 'dropdown-pages'
+	// 		)
+	// 	)
+	// );
 
 	// SITE INDENTITY
 	// = = = = = = = = = = = = = = = = = = =

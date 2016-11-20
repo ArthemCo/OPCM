@@ -67,6 +67,12 @@
 	transition: transform 0.4s $easeInOutExpo;
 }
 
+@include media('>phablet') {
+	.nav {
+		width: 75%;
+	}
+}
+
 .nav .nav-wrapper {
 	/* all navigation content */
 	height: 100%;
