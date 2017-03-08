@@ -21,7 +21,7 @@
 		</svg>
 	</a>
 
-	<div id="nav" class="nav" role="navigation">
+	<div id="nav" class="nav" role="navigation" style="background-color: <?php echo get_theme_mod('opcm_nav_color'); ?>">
 		<div class="nav-wrapper">
 			<div class="half-block">
 				<h2><?php the_title(); ?></h2>
@@ -35,10 +35,9 @@
 			<div class="half-block info">
 				<address>
 					<ul class="contact-info">
-						<li><a href="mailto:<?php echo get_theme_mod('opcm_nav_email'); ?>"><?php echo get_theme_mod('opcm_nav_email'); ?></a></li>
-						<li><a href="tel:<?php echo get_theme_mod('opcm_nav_tel'); ?>">
-							<?php echo get_theme_mod('opcm_nav_tel'); ?>
-						</a></li>
+						<li>
+							<a href="mailto:<?php echo get_theme_mod('opcm_nav_email'); ?>"><?php echo get_theme_mod('opcm_nav_email'); ?></a>
+						</li>
 						<li>
 							<span><?php echo get_theme_mod('opcm_nav_address_line_1'); ?></span>
 							<span><?php echo get_theme_mod('opcm_nav_address_line_2'); ?></span>

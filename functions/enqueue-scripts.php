@@ -10,8 +10,8 @@ function site_scripts() {
 	//  END VENDOR
 
   // switched to mini for prod
-	wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/app.js', array(), '1.0.3', true );
-	wp_enqueue_script( 'nav-js', get_template_directory_uri() . '/assets/js/navigation.js', array(), '1.0.4', true );
+	wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/app.min.js', array(), '1.0.4', true );
+	wp_enqueue_script( 'smoothstate', get_template_directory_uri() . '/assets/js/smoothState.js', array(), '1.0.2', true );
 
 	// Register main stylesheet
 	wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.6', 'all' );

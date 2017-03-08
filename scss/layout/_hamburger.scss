@@ -50,46 +50,46 @@
 	stroke-dashoffset: -120; // fekin cool
 }
 
-.nav-icon.is-open span:nth-child(1),
-.nav-icon.is-open span:nth-child(6) {
+.nav-is-open .nav-icon span:nth-child(1),
+.nav-is-open .nav-icon span:nth-child(6) {
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
 
-.nav-icon.is-open span:nth-child(2),
-.nav-icon.is-open span:nth-child(5) {
+.nav-is-open .nav-icon span:nth-child(2),
+.nav-is-open .nav-icon span:nth-child(5) {
 	-webkit-transform: rotate(-45deg);
 	-moz-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 }
 
-.nav-icon.is-open span:nth-child(1) {
+.nav-is-open .nav-icon span:nth-child(1) {
 	left: 2px;
 	top: 5px;
 }
 
-.nav-icon.is-open span:nth-child(2) {
+.nav-is-open .nav-icon span:nth-child(2) {
 	left: calc(50% - 2px);
 	top: 5px;
 }
 
-.nav-icon.is-open span:nth-child(3) {
+.nav-is-open .nav-icon span:nth-child(3) {
 	left: -50%;
 	opacity: 0;
 }
 
-.nav-icon.is-open span:nth-child(4) {
+.nav-is-open .nav-icon span:nth-child(4) {
 	left: 100%;
 	opacity: 0;
 }
 
-.nav-icon.is-open span:nth-child(5) {
+.nav-is-open .nav-icon span:nth-child(5) {
 	left: 2px;
 	top: 14px;
 }
 
-.nav-icon.is-open span:nth-child(6) {
+.nav-is-open .nav-icon span:nth-child(6) {
 	left: calc(50% - 2px);
 	top: 14px;
 }

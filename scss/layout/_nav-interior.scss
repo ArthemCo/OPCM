@@ -5,6 +5,7 @@
 	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: normal;
+	color: $white;
 }
 
 .nav h2::after {
@@ -15,7 +16,7 @@
 	bottom: -20px;
 	height: 1px;
 	width: 60px;
-	background-color: currentColor;
+	background-color: $white;
 }
 
 .nav .nav-menu-container {
@@ -30,7 +31,6 @@
 	transition: color .2s ease;
 	&:hover {
 		color: $brand;
-		text-decoration: none;
 	}
 }
 

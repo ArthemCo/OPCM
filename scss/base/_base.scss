@@ -1,41 +1,51 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 // Body reset
 // -------------------------
 html {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-		-ms-overflow-style: -ms-autohiding-scrollbar;
-		-ms-text-size-adjust: 100%;
-		-webkit-text-size-adjust: 100%
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
-    font-family: $font-sans-serif;
-    @include font-size($font-size-base);
-    -webkit-font-smoothing: antialiased;
-		-moz-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: "liga", "kern";
-    text-rendering: optimizelegibility;
-    font-weight: $normal;
-    overflow-x: hidden;
-    color: $gray-darker;
-    background-color: $white;
-        &.disable-scroll {
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-        }
+	font-family: $font-sans-serif;
+	@include font-size($font-size-base);
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-moz-font-feature-settings: "liga", 'kern';
+	text-rendering: optimizelegibility;
+	font-weight: $normal;
+	overflow-x: hidden;
+	color: $gray-darker;
+	background-color: $white;
+
+	&.disable-scroll {
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: $black;
 }
 
 ::-moz-selection {
-    background: $black;
-    color: $brand-light;
+	background: $black;
+	color: $brand-light;
 }
 
 ::selection {
-    background: $black;
-    color: $brand-light;
+	background: $black;
+	color: $brand-light;
 }

@@ -24,14 +24,14 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/assets/icons/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/assets/icons/favicon-16x16.png">
 
-	<meta name="msapplication-TileColor" content="#121212">
+	<meta name="msapplication-TileColor" content="#880015">
 	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/icons/ms-icon-144x144.png">
 
 	<!--[if IE]>
 		<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
 	<![endif]-->
 
-	<meta name="theme-color" content="#121212">
+	<meta name="theme-color" content="#880015">
 
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
@@ -46,3 +46,5 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+	<?php get_template_part('parts/nav'); ?>

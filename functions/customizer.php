@@ -160,16 +160,15 @@ function opcm_customizer_register( $wp_customize ) {
 		)
 	);
 
-	// Add nav info to existing title section
-	$wp_customize->add_setting( 'opcm_nav_tel' );
+	// Add nav color picker
+	$wp_customize->add_setting('opcm_nav_color');
 	$wp_customize->add_control(
-		new WP_Customize_Control(
-			$wp_customize, 'opcm_nav_tel', array(
-				'label'    => __('Telephone Number', 'opcm'),
-				'section'  => 'title_tagline',
-				'settings' => 'opcm_nav_tel',
-			)
-		)
+		new WP_Customize_Color_Control(
+		$wp_customize, 'opcm_nav_color', array(
+			'label'      => __( 'Nav Color', 'opcm' ),
+			'section'    => 'title_tagline',
+			'settings'   => 'opcm_nav_color',
+		) )
 	);
 
 	// Add nav info to existing title section => address line 1

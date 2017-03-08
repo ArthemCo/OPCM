@@ -1,26 +1,24 @@
 @import 'hamburger';
-#content {
-	z-index: map-get($z-index, 'two');
-	overflow-y: auto;
-	-webkit-overflow-scrolling: touch;
-}
-
-.navigation-is-open #content {
-}
+// #content {
+// 	z-index: map-get($z-index, 'two');
+// 	overflow-y: auto;
+// 	-webkit-overflow-scrolling: touch;
+// }
 
 #nav-logo {
 	height: 40px;
 	width: auto;
-	position: absolute;
+	position: fixed;
 	top: $spacer;
-	left: $spacer;
-	z-index: map-get($z-index, 'two');
+	left: $spacer*2;
+	z-index: map-get($z-index, 'four');
+	transition: transform 0.5s ease;
 }
 
 .nav-trigger {
 	position: fixed; // from 'fixed'
 	z-index: map-get($z-index, 'four');
-	right: $spacer+10px;
+	right: $spacer;
 	bottom: $spacer;
 	height: 54px;
 	width: 54px;
@@ -30,7 +28,7 @@
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
-	transition: transform 0.5s;
+	transition: transform 0.5s ease;
 }
 
 .nav-trigger .nav-icon {
@@ -48,7 +46,7 @@
 	transition: stroke-dashoffset 0.4s 0s;
 }
 
-.navigation-is-open .nav-trigger circle {
+.nav-is-open .nav-trigger circle {
 	stroke-dashoffset: 0;
 	transition: stroke-dashoffset 0.4s 0.3s;
 }
@@ -74,20 +72,17 @@
 }
 
 .nav .nav-wrapper {
-	/* all navigation content */
+	/* all nav content */
 	height: 100%;
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
-	padding: $spacer 5% 40px calc(5% + #{$spacer});
+	padding: $spacer*4 5% 40px $spacer*2;
 }
 
-.navigation-is-open .nav {
+.nav-is-open .nav {
 	@include transform(translate3D(0,0,0));
 }
 
-.navigation-is-open .nav .nav-wrapper {
-
-}
 
 @import 'nav-interior';
 
@@ -105,4 +100,35 @@
 	height: auto;
 	overflow: visible;
 	padding: 100px 5%;
+}
+
+.ui-hidden {
+	#nav-logo {
+		transform: translate3d(-300px, 0, 0);;
+	}
+
+	.nav-trigger {
+		transform: translate3d(300px, 0, 0);
+	}
+}
+
+// resetting FX
+.nav-is-open .ui-hidden {
+	#nav-logo {
+		transform: translate3d(0, 0, 0);;
+	}
+
+	.nav-trigger {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@include media('>desktop') {
+	.nav {
+		width: 25rem;
+		@include transform(translate3D(0,0,0));
+	}
+	.nav-trigger {
+		display: none;
+	}
 }

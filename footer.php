@@ -19,16 +19,13 @@
 						</nav>
 					</div>
 					<div class="">
-						<p><a href="mailto:<?php echo get_theme_mod('opcm_nav_email'); ?>"><?php echo get_theme_mod('opcm_nav_email'); ?></a> |
-						<a href="tel:<?php echo get_theme_mod('opcm_nav_tel'); ?>"><?php echo get_theme_mod('opcm_nav_tel'); ?></a> | &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+						<p><a href="mailto:<?php echo get_theme_mod('opcm_nav_email'); ?>"><?php echo get_theme_mod('opcm_nav_email'); ?></a> | &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
 					</div>
 				</div>
 				<!-- end #inner-footer -->
 			</footer>
 			</div>
 			<!-- end #content -->
-
-			<?php get_template_part( 'parts/nav' ); ?>
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 			<script> window.jQuery || document.write('<script src="js/vendor/jquery/dist/jquery.min.js"><\\/script>'); </script>

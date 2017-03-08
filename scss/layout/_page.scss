@@ -2,18 +2,9 @@
 
 #inner-content {
 	margin-top: 5rem;
-	min-height: 100vh;
+	min-height: 90vh;
 	padding-bottom: 2rem;
-  /* equal to footer height */
-  margin-bottom: -142px;
-	&:after {
-	  content: "";
-	  display: block;
-		height: 142px;
-	}
-}
-.home #inner-content {
-	min-height: 55vh;
+
 }
 
 .alignleft, .alignright {
@@ -36,12 +27,12 @@
 footer {
 	text-align: center;
 }
+
 @include media('>desktop') {
 	.page-template-default {
 		.page-featured-image {
 			width: 33vw;
 			height: 100%;
-			max-height: 45rem;
 			overflow: hidden;
 			position: fixed;
 			top: 0px;
