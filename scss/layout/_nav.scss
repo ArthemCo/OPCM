@@ -10,7 +10,7 @@
 	width: auto;
 	position: fixed;
 	top: $spacer;
-	left: $spacer*2;
+	left: $spacer;
 	z-index: map-get($z-index, 'four');
 	transition: transform 0.5s ease;
 }
@@ -67,7 +67,7 @@
 
 @include media('>phablet') {
 	.nav {
-		width: 75%;
+		width: 25rem;
 	}
 }
 
@@ -115,7 +115,7 @@
 // resetting FX
 .nav-is-open .ui-hidden {
 	#nav-logo {
-		transform: translate3d(0, 0, 0);;
+		transform: translate3d(0, 0, 0);
 	}
 
 	.nav-trigger {
@@ -124,8 +124,11 @@
 }
 
 @include media('>desktop') {
+	#nav-logo {
+		left: $spacer*2;
+	}
+
 	.nav {
-		width: 25rem;
 		@include transform(translate3D(0,0,0));
 	}
 	.nav-trigger {

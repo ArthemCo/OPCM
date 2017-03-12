@@ -15,22 +15,6 @@
 			document.body.classList.toggle('nav-is-open');
 		});
 
-		// add nav links to smoothState
-		$(".menu-item a").click(function(e) {
-			e.preventDefault();
-			var c = $("#content").smoothState().data("smoothState"),
-				l = $(this).attr("href");
-			c.load(l);
-		});
-
-		$('#content').smoothState({
-			onAfter: function() {
-				if (document.body.classList.contains('nav-is-open')) {
-					document.body.classList.remove('nav-is-open');
-				}
-			}
-		});
-
 		// Scrolling
 		var w = $(window),
 				windowWidth    = w.width(),

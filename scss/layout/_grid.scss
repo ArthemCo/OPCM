@@ -27,7 +27,7 @@
 // For devices larger than 400px
 @include media('>phone') {
 	.container {
-		width: $container-width-larger-than-mobile;
+		// width: $container-width-larger-than-mobile;
 	}
 }
 

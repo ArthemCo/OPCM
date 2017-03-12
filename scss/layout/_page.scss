@@ -4,31 +4,20 @@
 	margin-top: 5rem;
 	min-height: 90vh;
 	padding-bottom: 2rem;
-
+	 img {
+		 width: 100%;
+	 }
 }
 
-.alignleft, .alignright {
-	width: 50%;
-	display: inline-block;
-	margin-bottom: 1em;
-
-}
-.alignleft {
-	float: left;
-	margin-left: 0px;
-	margin-right: 1em;
-}
-.alignright {
-	float: right;
-	margin-right: 0px;
-	margin-left: 1em;
+.entry-content, .page-title {
+	padding: 0 1rem;
 }
 
 footer {
 	text-align: center;
 }
 
-@include media('>desktop') {
+@include media('>ultrawide') {
 	.page-template-default {
 		.page-featured-image {
 			width: 33vw;

@@ -5,9 +5,9 @@ Template Name: Homepage
 
 <?php get_header(); ?>
 
-	<div id="content">
+	<div id="content" <?php body_class(); ?>>
 
-		<div id="hero" style="background:url('<?php echo get_theme_mod('home_img');?>') center center">
+		<div id="hero" style="background:url('<?php echo get_theme_mod('home_img');?>') center center no-repeat">
 			<!-- call to action b'doodle -->
 			<div id="home-cta">
 				<?php if (get_theme_mod('home_CTA_text') != '') : ?>

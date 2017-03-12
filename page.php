@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div id="content">
+	<div id="content" <?php body_class(); ?>>
 		<?php if ( has_post_thumbnail()) : ?>
 			<div class="page-featured-image">
 				<?php the_post_thumbnail('large'); ?>

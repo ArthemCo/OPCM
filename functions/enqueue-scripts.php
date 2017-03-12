@@ -10,15 +10,21 @@ function site_scripts() {
 	//  END VENDOR
 
   // switched to mini for prod
-	wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/app.min.js', array(), '1.0.4', true );
-	wp_enqueue_script( 'smoothstate', get_template_directory_uri() . '/assets/js/smoothState.js', array(), '1.0.2', true );
+	wp_enqueue_script( 'site-js', get_template_directory_uri() . '/assets/js/app.min.js', array(), '1.0.8', true );
+	// wp_enqueue_script( 'smoothstate', get_template_directory_uri() . '/assets/js/smoothState.js', array(), '1.0.2', true );
 
 	// Register main stylesheet
-	wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.6', 'all' );
+	wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.8', 'all' );
 
 	// Comment reply script for threaded comments
 	if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+
+	// https://github.com/cedaro/dequeue-jquery-migrate/blob/develop/dequeue-jquery-migrate.php
+	if ( ! is_admin() && ! empty( $scripts->registered['jquery'] ) ) {
+		$jquery_dependencies = $scripts->registered['jquery']->deps;
+		$scripts->registered['jquery']->deps = array_diff( $jquery_dependencies, array( 'jquery-migrate' ) );
 	}
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);

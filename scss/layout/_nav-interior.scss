@@ -34,7 +34,7 @@
 	}
 }
 
-.current_page_item a{
+.current-menu-item a{
 	color: $brand;
 }
 
@@ -45,6 +45,10 @@
 		font-size: small;
 		padding-top: 30px;
 		border-bottom: 3px solid;
+		&:hover {
+			text-decoration: none;
+			border-color: $brand;
+		}
 	}
 }
 
@@ -135,4 +139,13 @@
 	span {
 		display: block;
 	}
+}
+
+@include media('<phablet') {
+	.nav h2 {
+		display: none;
+	}
+	.nav .nav-wrapper {
+		padding: 40px 5% 40px 60px;
+ }
 }
