@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/badge/Build-passing-brightgreen.svg)](Build passing)
+![Build Status](https://img.shields.io/badge/Build-passing-brightgreen.svg)]
 
 OPCM
 ====
